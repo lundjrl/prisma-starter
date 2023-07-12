@@ -11,9 +11,11 @@ RUN yarn && yarn install \
   --frozen-lockfile \
   --non-interactive
 
+COPY . .
+
+RUN npx tsc
 RUN yarn build
 
-COPY . .
 EXPOSE 8000
 
 CMD ["yarn", "start"]
