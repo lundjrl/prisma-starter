@@ -15,6 +15,7 @@ COPY . .
 
 RUN npx tsc
 RUN yarn build
+RUN npx prisma generate
 
 EXPOSE 8000
 

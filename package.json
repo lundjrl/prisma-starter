@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "npx tsc",
+    "docker-build": "docker-compose up --build --remove-orphans",
     "start": "tsup index.ts && node dist/index.js",
     "setup": "yarn build && yarn start",
     "clean": "rm -rf dist",
